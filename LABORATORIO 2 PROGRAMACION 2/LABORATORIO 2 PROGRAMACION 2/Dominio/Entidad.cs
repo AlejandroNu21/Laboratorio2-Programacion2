@@ -12,8 +12,6 @@ namespace LABORATORIO_2_PROGRAMACION_2.Dominio
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-        [Display(Name = "IdPersona")]
-        [Range(0, int.MaxValue, ErrorMessage = "No valido")]
         public int IdPersona { get; set; }
 
 
@@ -22,7 +20,7 @@ namespace LABORATORIO_2_PROGRAMACION_2.Dominio
         public string NombrePersona { get; set; }
 
         [Display(Name = "EdadPersona")]
-        [Range(18, int.MaxValue, ErrorMessage = "No es mayor de edad")]
+        [Range(18, int.MaxValue, ErrorMessage = "No cumple con la edad necesaria")]
         public int EdadPersona { get; set; }
 
 

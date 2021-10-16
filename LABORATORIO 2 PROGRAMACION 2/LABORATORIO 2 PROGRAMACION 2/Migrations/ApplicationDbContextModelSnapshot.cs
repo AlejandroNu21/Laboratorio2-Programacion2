@@ -26,12 +26,14 @@ namespace LABORATORIO_2_PROGRAMACION_2.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("DescripcionPersona")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("EdadPersona")
                         .HasColumnType("int");
 
                     b.Property<string>("NombrePersona")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdPersona");

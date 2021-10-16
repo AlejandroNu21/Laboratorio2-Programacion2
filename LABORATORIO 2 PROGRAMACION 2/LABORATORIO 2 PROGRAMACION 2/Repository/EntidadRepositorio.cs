@@ -13,7 +13,7 @@ namespace LABORATORIO_2_PROGRAMACION_2.Repository
 
         private ApplicationDbContext app;
 
-        public EntidadRepositorio(ApplicationDbContex app)
+        public EntidadRepositorio(ApplicationDbContext app)
         {
             this.app = app;
         }
