@@ -1,4 +1,6 @@
 using LABORATORIO_2_PROGRAMACION_2.Data;
+using LABORATORIO_2_PROGRAMACION_2.Repository;
+using LABORATORIO_2_PROGRAMACION_2.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +30,7 @@ namespace LABORATORIO_2_PROGRAMACION_2
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddTransient<IDatos, EntidadRepositorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

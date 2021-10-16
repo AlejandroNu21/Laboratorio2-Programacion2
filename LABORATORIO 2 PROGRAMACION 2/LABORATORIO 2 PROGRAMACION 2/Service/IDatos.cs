@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LABORATORIO_2_PROGRAMACION_2.Service
 {
-    interface IDatos
+    public interface IDatos
     {
         void Save(Entidad E);
 
-        List<Entidad> listardatos();
+        ICollection<Entidad> listardatos();
     }
 }

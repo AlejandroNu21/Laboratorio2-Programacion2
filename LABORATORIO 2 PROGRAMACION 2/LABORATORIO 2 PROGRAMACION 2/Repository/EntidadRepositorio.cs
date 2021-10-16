@@ -23,7 +23,7 @@ namespace LABORATORIO_2_PROGRAMACION_2.Repository
             app.Update(E);
             app.SaveChanges();
        }
-        List<Entidad> IDatos.listardatos()
+        public ICollection<Entidad> listardatos()
         {
             return app.Entidades.ToList();
         }

@@ -1,4 +1,5 @@
 ﻿using LABORATORIO_2_PROGRAMACION_2.Models;
+using LABORATORIO_2_PROGRAMACION_2.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,9 +13,10 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private IDatos idatos;
+        public HomeController(ILogger<HomeController> logger, IDatos idatos)
         {
+            this.idatos = idatos;
             _logger = logger;
         }
 
@@ -23,6 +25,13 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
             return View();
         }
 
+        public IActionResult GetAll() 
+        {
+            var DandoFormatoJson = idatos.listardatos();
+
+            return Json(new { data = DandoFormatoJson });
+        
+        }
         public IActionResult Privacy()
         {
             return View();

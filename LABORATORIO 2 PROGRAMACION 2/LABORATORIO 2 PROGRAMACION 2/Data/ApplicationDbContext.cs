@@ -12,11 +12,14 @@ namespace LABORATORIO_2_PROGRAMACION_2.Data
     {
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-           : base(options)
-        {
-
-
+           : base(options) {
         }
+
+        protected ApplicationDbContext() 
+        { 
+        
+        }
+
         public DbSet<Entidad> Entidades { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -26,9 +29,5 @@ namespace LABORATORIO_2_PROGRAMACION_2.Data
 
         }
 
-        public static implicit operator ApplicationDbContext(ApplicationDbContex v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
