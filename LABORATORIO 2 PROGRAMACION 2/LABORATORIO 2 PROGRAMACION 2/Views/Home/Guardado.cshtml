@@ -3,7 +3,7 @@
     ViewData["Title"] = "Registro";
 }
 
-<body style="background-color: lightsteelblue;">
+<body>
 
     <div class="text-center">
         <h1 class=" animate__animated animate__backInDown">Puede Registrarse</h1>
@@ -16,7 +16,7 @@
             h1 {
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 font-size: 35px;
-                color: azure;
+                color: darkred
             }
         </style>
     </div>
@@ -45,9 +45,10 @@
         <br />
         @Html.ValidationMessageFor(m => m.DescripcionPersona, null, new { @class = "red" })
         <br />
-
+        <br />
+        <i class="fa-thin fa-floppy-disk"></i>
         <button type="submit" class="btn btn-success">Guardar</button>
-        
+
 
     }
 
