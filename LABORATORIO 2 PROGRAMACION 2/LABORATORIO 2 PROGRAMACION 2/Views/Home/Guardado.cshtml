@@ -3,37 +3,50 @@
     ViewData["Title"] = "Registro";
 }
 
-<div class="text-left">
-    <h1 class="display-4">Puede registrarse</h1>
-</div>
+<body style="background-color: lightsteelblue;">
+
+    <div class="text-center">
+        <h1 class="display-4">Puede registrarse</h1>
+        <style>
+            h1 
+            {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 35px;
+                color: azure;
+            }
+        </style>
+    </div>
 
 
-@using (Html.BeginForm("DescripcionView", "Listado", FormMethod.Post))
+    @using (Html.BeginForm("DescripcionView", "Listado", FormMethod.Post))
     {
-    <br />
-    @Html.LabelFor(m => m.NombrePersona)
-    <br />
-    @Html.TextBoxFor(m => m.NombrePersona)
-    <br />
-    @Html.ValidationMessageFor(m => m.NombrePersona, null, new { @class = "red" })
+         <br />
+        @Html.LabelFor(m => m.NombrePersona)
+        <br />
+        @Html.TextBoxFor(m => m.NombrePersona)
+        <br />
+        @Html.ValidationMessageFor(m => m.NombrePersona, null, new { @class = "red" })
 
-    <br />
-    @Html.LabelFor(m => m.EdadPersona)
-    <br />
-    @Html.TextBoxFor(m => m.EdadPersona)
-    <br />
-    @Html.ValidationMessageFor(m => m.EdadPersona, null, new { @class = "red" })
+        <br />
+        @Html.LabelFor(m => m.EdadPersona)
+        <br />
+        @Html.TextBoxFor(m => m.EdadPersona)
+        <br />
+        @Html.ValidationMessageFor(m => m.EdadPersona, null, new { @class = "red" })
 
-    <br />
-    @Html.LabelFor(m => m.DescripcionPersona)
-    <br />
-    @Html.TextBoxFor(m => m.DescripcionPersona)
-    <br />
-    @Html.ValidationMessageFor(m => m.DescripcionPersona, null, new { @class = "red" })
-    <br />
+        <br />
+        @Html.LabelFor(m => m.DescripcionPersona)
+        <br />
+        @Html.TextBoxFor(m => m.DescripcionPersona)
+        <br />
+        @Html.ValidationMessageFor(m => m.DescripcionPersona, null, new { @class = "red" })
+        <br />
 
-    <input type="submit" />
+        <button type="submit" class="btn btn-success">Guardar</button>
 
 
 
+     }
 }
+</body>
+     

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace LABORATORIO_2_PROGRAMACION_2.Dominio
 {
+
+   
     public class Entidad
     {
         [Key]

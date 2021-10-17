@@ -55,9 +55,9 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
         
         }
          public IActionResult Guardado()
-        {
+         {
             return View();
-        }
+         }
 
         public IActionResult Listado()
         {
