@@ -8,6 +8,8 @@ namespace LABORATORIO_2_PROGRAMACION_2.Models.ViewModel
 {
     public class EntidadViewModel
     {
+        [Display(Name = "Id Persona")]
+        [Range(0, int.MaxValue, ErrorMessage = "No valido")]
         public int IdPersona { get; set; }
 
 

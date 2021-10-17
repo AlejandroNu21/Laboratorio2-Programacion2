@@ -30,7 +30,7 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
         }
 
 
-        public IActionResult DescripcionView(EntidadViewModel entidad)
+        public IActionResult DescripcionViewModel(EntidadViewModel entidad)
         {
             if (!ModelState.IsValid)
             {
@@ -39,7 +39,7 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
             return Redirect("EntidadViewModel");
         }
 
-        public IActionResult DescripcionView()
+        public IActionResult DescripcionViewModel()
         {
             return View();
         }
@@ -58,9 +58,6 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
         }
          public IActionResult Guardado()
         {
-
-            //Entidad entidad = new Entidad();
-            //idatos.Save(entidad);
 
 
             return View();
