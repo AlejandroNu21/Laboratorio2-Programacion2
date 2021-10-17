@@ -1,4 +1,6 @@
-﻿using LABORATORIO_2_PROGRAMACION_2.Models;
+﻿using LABORATORIO_2_PROGRAMACION_2.Dominio;
+using LABORATORIO_2_PROGRAMACION_2.Models;
+using LABORATORIO_2_PROGRAMACION_2.Models.ViewModel;
 using LABORATORIO_2_PROGRAMACION_2.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -25,6 +27,26 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
             return View();
         }
 
+        // GET: Entidad
+        public IActionResult DescripcionView(EntidadViewModel entidad)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("EntidadViewModel", entidad);
+            }
+            return Redirect("EntidadViewModel");
+        }
+
+        public IActionResult DescripcionView()
+        {
+            return View();
+        }
+
+        public IActionResult EntidadViewModel()
+        {
+            return View();
+        }
+
         public IActionResult GetAll() 
         {
             var DandoFormatoJson = idatos.listardatos();
@@ -32,6 +54,17 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
             return Json(new { data = DandoFormatoJson });
         
         }
+         public IActionResult Guardado()
+        {
+            return View();
+        }
+
+        public IActionResult Listado()
+        {
+            return View();
+        }
+
+
         public IActionResult Privacy()
         {
             return View();

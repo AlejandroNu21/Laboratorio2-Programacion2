@@ -1,8 +1,39 @@
-﻿@{ 
+﻿@model LABORATORIO_2_PROGRAMACION_2.Models.ViewModel.EntidadViewModel
+@{
     ViewData["Title"] = "Registro";
 }
 
 <div class="text-left">
     <h1 class="display-4">Puede registrarse</h1>
 </div>
-    
+
+
+@using (Html.BeginForm("DescripcionView", "Listado", FormMethod.Post))
+    {
+    <br />
+    @Html.LabelFor(m => m.NombrePersona)
+    <br />
+    @Html.TextBoxFor(m => m.NombrePersona)
+    <br />
+    @Html.ValidationMessageFor(m => m.NombrePersona, null, new { @class = "red" })
+
+    <br />
+    @Html.LabelFor(m => m.EdadPersona)
+    <br />
+    @Html.TextBoxFor(m => m.EdadPersona)
+    <br />
+    @Html.ValidationMessageFor(m => m.EdadPersona, null, new { @class = "red" })
+
+    <br />
+    @Html.LabelFor(m => m.DescripcionPersona)
+    <br />
+    @Html.TextBoxFor(m => m.DescripcionPersona)
+    <br />
+    @Html.ValidationMessageFor(m => m.DescripcionPersona, null, new { @class = "red" })
+    <br />
+
+    <input type="submit" />
+
+
+
+}
