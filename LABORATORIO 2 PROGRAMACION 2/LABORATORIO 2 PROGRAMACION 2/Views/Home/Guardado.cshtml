@@ -9,8 +9,8 @@
         <h1 class=" animate__animated animate__backInDown">Puede Registrarse</h1>
         <script src="https://kit.fontawesome.com/16bd784e77.js" crossorigin="anonymous"></script>
         <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-       
+              href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
         <style>
             h1 {
@@ -24,7 +24,7 @@
 
     @using (Html.BeginForm("DescripcionView", "Listado", FormMethod.Post))
     {
-         <br />
+        <br />
         @Html.LabelFor(m => m.NombrePersona)
         <br />
         @Html.TextBoxFor(m => m.NombrePersona)
@@ -47,10 +47,9 @@
         <br />
 
         <button type="submit" class="btn btn-success">Guardar</button>
+        
 
+    }
 
-
-     }
-    
 </body>
      
