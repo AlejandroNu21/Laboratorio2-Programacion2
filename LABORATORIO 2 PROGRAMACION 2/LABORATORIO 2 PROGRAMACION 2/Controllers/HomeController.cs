@@ -24,6 +24,8 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
 
         public IActionResult Index()
         {
+
+
             return View();
         }
 
@@ -56,6 +58,11 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
         }
          public IActionResult Guardado()
         {
+
+            //Entidad entidad = new Entidad();
+            //idatos.Save(entidad);
+
+
             return View();
         }
 
