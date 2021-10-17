@@ -29,7 +29,7 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
             return View();
         }
 
-        // GET: Entidad
+
         public IActionResult DescripcionView(EntidadViewModel entidad)
         {
             if (!ModelState.IsValid)
@@ -64,7 +64,7 @@ namespace LABORATORIO_2_PROGRAMACION_2.Controllers
 
 
             return View();
-        }
+         }
 
         public IActionResult Listado()
         {

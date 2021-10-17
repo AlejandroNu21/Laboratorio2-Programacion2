@@ -3,37 +3,54 @@
     ViewData["Title"] = "Registro";
 }
 
-<div class="text-left">
-    <h1 class="display-4">Puede registrarse</h1>
-</div>
+<body>
+
+    <div class="text-center">
+        <h1 class=" animate__animated animate__backInDown">Puede Registrarse</h1>
+        <script src="https://kit.fontawesome.com/16bd784e77.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
-@using (Html.BeginForm("DescripcionView", "Listado", FormMethod.Post))
+        <style>
+            h1 {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 35px;
+                color: darkred
+            }
+        </style>
+    </div>
+
+
+    @using (Html.BeginForm("DescripcionView", "Listado", FormMethod.Post))
     {
-    <br />
-    @Html.LabelFor(m => m.NombrePersona)
-    <br />
-    @Html.TextBoxFor(m => m.NombrePersona)
-    <br />
-    @Html.ValidationMessageFor(m => m.NombrePersona, null, new { @class = "red" })
+        <br />
+        @Html.LabelFor(m => m.NombrePersona)
+        <br />
+        @Html.TextBoxFor(m => m.NombrePersona)
+        <br />
+        @Html.ValidationMessageFor(m => m.NombrePersona, null, new { @class = "red" })
 
-    <br />
-    @Html.LabelFor(m => m.EdadPersona)
-    <br />
-    @Html.TextBoxFor(m => m.EdadPersona)
-    <br />
-    @Html.ValidationMessageFor(m => m.EdadPersona, null, new { @class = "red" })
+        <br />
+        @Html.LabelFor(m => m.EdadPersona)
+        <br />
+        @Html.TextBoxFor(m => m.EdadPersona)
+        <br />
+        @Html.ValidationMessageFor(m => m.EdadPersona, null, new { @class = "red" })
 
-    <br />
-    @Html.LabelFor(m => m.DescripcionPersona)
-    <br />
-    @Html.TextBoxFor(m => m.DescripcionPersona)
-    <br />
-    @Html.ValidationMessageFor(m => m.DescripcionPersona, null, new { @class = "red" })
-    <br />
+        <br />
+        @Html.LabelFor(m => m.DescripcionPersona)
+        <br />
+        @Html.TextBoxFor(m => m.DescripcionPersona)
+        <br />
+        @Html.ValidationMessageFor(m => m.DescripcionPersona, null, new { @class = "red" })
+        <br />
+        <br />
+        <i class="fa-thin fa-floppy-disk"></i>
+        <button type="submit" class="btn btn-success">Guardar</button>
 
-    <input type="submit" />
 
+    }
 
-
-}
+</body>
+     
